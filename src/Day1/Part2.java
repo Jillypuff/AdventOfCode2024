@@ -18,17 +18,17 @@ public class Part2 {
         Collections.sort(leftList);
         Collections.sort(rightList);
         int timesOverlapped;
-        for (int i = 0; i < leftList.size(); i++){
-            timesOverlapped = getAmountOfTimesValuesOverlap(leftList.get(i));
-            similarityScore += getSimilarityScore(leftList.get(i), timesOverlapped);
+        for (int i : leftList){
+            timesOverlapped = getAmountOfTimesValuesOverlap(i);
+            similarityScore += getSimilarityScore(i, timesOverlapped);
         }
         System.out.println(similarityScore);
     }
 
     public int getAmountOfTimesValuesOverlap(int data){
         int total = 0;
-        for (int i = 0; i < rightList.size(); i++) {
-            if (rightList.get(i) == data){
+        for (int i : rightList) {
+            if (i == data){
                 total++;
             }
         }

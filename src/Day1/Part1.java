@@ -29,7 +29,7 @@ public class Part1 {
 
     public void parseData(){
         try (BufferedReader br = new BufferedReader(new FileReader("src/Day1/data"))) {
-            String line = "";
+            String line;
             while ((line = br.readLine()) != null) {
                 String[] lines = line.split("\\s+");
                 leftList.add(Integer.parseInt(lines[0]));
